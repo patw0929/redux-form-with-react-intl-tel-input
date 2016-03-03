@@ -50,7 +50,7 @@
     "start": "webpack-dev-server",
     "build": "webpack --config webpack.dist.config.js",
     "deploy": "gh-pages-deploy",
-    "clean-source": "rimraf README.md src .babelrc .eslintrc .gitignore package.json webpack.config.js webpack.dist.config.js"
+    "clean-source": "rimraf README.md src dist .babelrc .eslintrc .gitignore package.json webpack.config.js webpack.dist.config.js"
   },
   "gh-pages-deploy": {
     "staticpath": "dist",
