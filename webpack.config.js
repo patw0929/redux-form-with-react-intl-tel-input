@@ -7,6 +7,7 @@
  */
 
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const eslintrcPath = path.resolve(__dirname, '.eslintrc');
 
@@ -74,6 +75,9 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
+    new HtmlWebpackPlugin({
+      template: 'src/template.html',
+    }),
   ],
 
   devServer: {
