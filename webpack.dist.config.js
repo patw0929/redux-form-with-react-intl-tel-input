@@ -1,6 +1,7 @@
-var webpack = require('webpack'),
-    path = require('path');
-var eslintrcPath = path.resolve(__dirname, '.eslintrc');
+const webpack = require('webpack');
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const eslintrcPath = path.resolve(__dirname, '.eslintrc');
 
 module.exports = {
 
@@ -37,6 +38,10 @@ module.exports = {
         // This has effect on the react lib size
         NODE_ENV: JSON.stringify('production'),
       },
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'src/template.html',
     }),
   ],
 
